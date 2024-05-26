@@ -1,1 +1,1 @@
-This is a simple web-app for taking notes and to do's specially designed for KPI-04 students of Kyiv Polytechnic University
+This is a simple web-app for taking notes and to do's specially designed for myself as a KPI-04 student of Kyiv Polytechnic University
