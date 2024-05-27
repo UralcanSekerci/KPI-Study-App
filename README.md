@@ -4,5 +4,5 @@ It's live at;
 https://uralcansekerci.github.io/KPI-Study-App/
 
 Username: Can 
-Password: 123456
+Password: pass
 
