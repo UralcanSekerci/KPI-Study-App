@@ -1,28 +1,29 @@
-// Dom loaded part
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('loginForm');
   const wrapper = document.querySelector('.wrapper-main');
 
-  loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+  function handleLogin(event) {
+    event.preventDefault();  // Preventing the default form submission behavior
+    const username = document.querySelector("#username").value;  // Getting the username from the input 
+    const password = document.querySelector("#password").value;  // Getting the password from the input 
 
-    // Here just want to do a fake simple login for now
-    if (username === 'Can' && password === '123456') {
-      document.querySelector('.welcome .content h1').textContent = `Hello ${username}`;
-      wrapper.classList.remove('show-login');
-      wrapper.classList.add('show-home');
+    if (validateLogin(username, password)) {  // Call validateLogin to check credentials
+      document.querySelector(".wrapper-main").classList.remove("show-login");
+      document.querySelector(".welcome h1").textContent = `Welcome, ${username}!`;
     } else {
-      alert('Invalid credentials');
+      alert("Invalid credentials");
     }
-  });
+  }
 
-  // Show login screen on load
+  function validateLogin(username, password) {
+    // Simple validation just for now, I'll update it further
+    return username === "Can" && password === "pass";
+  }
+
+
   wrapper.classList.add('show-login');
+  loginForm.addEventListener('submit', handleLogin);
 });
-
-
 
 
 // Main
